@@ -8,9 +8,8 @@
  * Controller of the angularAppApp
  */
 angular.module('angularAppApp')
-  .controller('CalcCtrl', function($scope) {
-    $scope.sum = 'nada';
+  .controller('CalcCtrl', function($scope, BoltCalcs) {
     $scope.calc = function() {
-      $scope.sum = parseFloat($scope.var1) + parseFloat($scope.var2);
+      $scope.sum = BoltCalcs.calc($scope.var1, $scope.var2);
     }
   });
